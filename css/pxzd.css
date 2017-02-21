@@ -236,11 +236,12 @@ li.diop .colonel-tab{display:block;}
 
 /* 新版 功能首页 */
 .func-tab{padding:0.13rem 0.075rem;}
-.func-tab h2{padding:0.03rem 0;line-height:0.2rem;font-size:0.12rem;font-weight:bold;}
-.func-tab h2 span{display:inline-block;width:0.2rem;height:0.2rem;background-color:#33ccae;border-radius:50%;color:#fff;text-align:center;margin-right:0.075rem;}
+.func-tab .title{padding:0.03rem 0;height:0.2rem;font-size:0.12rem;font-weight:bold;}
+.func-tab .title p{float:left;line-height:0.22rem;}
+.func-tab .title span{float:left;width:0.2rem;height:0.2rem;background-color:#33ccae;border-radius:50%;color:#fff;text-align:center;margin-right:0.075rem;line-height:0.22rem;}
 .func-tab ul{padding-left:0.26rem;margin-bottom:0.05rem;}
-.func-tab ul li p{display:inline-block;line-height:0.25rem;color:#33ccae;font-size:0.1rem;background:url(../pictures/mark-1.png) no-repeat left center;background-size:0.06rem;padding:0 0.15rem 0 0.11rem;position:relative;}
-.func-tab ul li p span{position:absolute;top:50%;right:0;width:0.05rem;height:0.09rem;background:url(../pictures/arrow-r-7.png) no-repeat 0 0;background-size:100%;margin-top:-0.048rem;}
+.func-tab ul li p{display:inline-block;line-height:0.25rem;color:#33ccae;font-size:0.1rem;background:url(../pictures/mark-1.png) no-repeat left 0.095rem;background-size:0.06rem;padding:0 0.15rem 0 0.11rem;position:relative;}
+.func-tab ul li p span{position:absolute;top:50%;right:0;width:0.05rem;height:0.09rem;background:url(../pictures/arrow-r-7.png) no-repeat 0 0;background-size:100%;margin-top:-0.045rem;}
 
 
 
