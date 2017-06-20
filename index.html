@@ -47,7 +47,7 @@
 
 	for(var i=0;i<oUl.length;i++){
 		oUl[i].index=i;
-		oUl[i].touchstart=function (){
+		oUl[i].onmouseup=function (){
 			chek(oUl[this.index]);
 		};
 	}
@@ -55,7 +55,7 @@
 	function chek(oul){
 		oLi=oul.getElementsByTagName('li');
 		for(var i=0;i<oLi.length;i++){
-			oLi[i].touchend=function() {
+			oLi[i].onclick=function() {
 				for(var i=0;i<oLi.length;i++){
 					oLi[i].className='';
 				}
@@ -63,7 +63,5 @@
 			};
 		}
 	};
-
-
 </script>
 </html>
