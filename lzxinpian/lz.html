@@ -1,0 +1,69 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+</head>
+<body class="bgclwri">
+	<div class="warp">
+		<div class="content" id="con">
+			<h2>《量子芯片体验咨询表》</h2>
+			<p>1.经期及其前后小腹疼痛</p>
+			<ul class="clearfix">
+				<li class="">减轻</li>
+				<li class="">好转</li>
+				<li class="">有效</li>
+				<li class="">非常有效</li>
+				<li class="">无效</li>
+			</ul>
+			<p>1.经期及其前后小腹疼痛</p>
+			<ul class="clearfix">
+				<li class="">减轻</li>
+				<li class="">好转</li>
+				<li class="">有效</li>
+				<li class="">非常有效</li>
+				<li class="">无效</li>
+			</ul>
+			<p>1.经期及其前后小腹疼痛</p>
+			<ul class="clearfix">
+				<li class="">减轻</li>
+				<li class="">好转</li>
+				<li class="">有效</li>
+				<li class="">非常有效</li>
+				<li class="">无效</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script>
+	var oCon=document.getElementById('con');
+	var oUl=oCon.getElementsByTagName('ul');
+
+
+	for(var i=0;i<oUl.length;i++){
+		oUl[i].index=i;
+		oUl[i].touchstart=function (){
+			chek(oUl[this.index]);
+		};
+	}
+
+	function chek(oul){
+		oLi=oul.getElementsByTagName('li');
+		for(var i=0;i<oLi.length;i++){
+			oLi[i].touchend=function() {
+				for(var i=0;i<oLi.length;i++){
+					oLi[i].className='';
+				}
+				this.className='on';
+			};
+		}
+	};
+
+
+</script>
+</html>
