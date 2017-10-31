@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<meta name="description" content="" />
+<title></title>
+<style>
+div{ width:200px; height:200px; background:#ff4500; position:absolute; left:0; top:0; }
+.box{width:100px; height:100px; background:#9933fa; position:absolute; left:0; top:260px;}
+</style>
+<script>
+window.onload=function (){
+	var oDiv=document.getElementById('div1');
+
+	oDiv.ontouchstart=function (ev){
+		var oEvent=ev||event;
+		var oldX=oEvent.clientX-oDiv.offsetLeft;
+
+		document.ontouchmove=function (ev){
+			var oEvent=ev||event;
+			var l=oEvent.clientX-oldX;
+			var cW=document.documentElement.clientWidth;
+
+			if(l<100){
+				l=0;
+			}else if(l>(cW-oDiv.offsetWidth-100)){
+				l=cW-oDiv.offsetWidth;
+			}
+
+			oDiv.style.left=l+'px';
+		};
+		document.ontouchend=function (){
+			document.ontouchmove=null;
+			document.ontouchend=null;
+			oDiv.releaseCapture&&oDiv.releaseCapture();
+		};
+		oDiv.setCapture&&oDiv.setCapture();
+		return false;
+	};
+	var oBox=document.getElementById('box');
+	oBox.ontouchstart=function (){
+		alert(2);
+	};
+};
+</script>
+</head>
+
+<body>
+	<div id="div1"></div>
+	<div class="box" id="box"></div>
+</body>
+</html>
