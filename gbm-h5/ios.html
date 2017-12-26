@@ -1,0 +1,83 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="format-detection" content="telephone=no">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+   <style media="screen">
+   /* css部分：-------------------------- */
+   .wrapper2{
+     position:absolute;
+     top:0;
+     bottom:0;
+     left:0;
+     right:0;
+     overflow-y:auto;
+     -webkit-overflow-scrolling : touch;
+   }
+   </style>
+</head>
+<body>
+<div class="wrapper">
+     <section>内容部分aaaa111</section>
+     <section>内容部分aaaa222</section>
+     <section>内容部分aaaa333</section>
+</div>
+</body>
+<script type="text/javascript">
+// js部分：----------------------------
+/*阻止ios拖拽到底部还能继续拖拽*/
+var ScrollFix = function(elem) {
+    // Variables to track inputs
+    var startY, startTopScroll;
+
+    elem = elem || document.querySelector(elem);
+
+    // If there is no element, then do nothing
+    if(!elem)
+        return;
+
+    // Handle the start of interactions
+    elem.addEventListener('touchstart', function(event){
+        startY = event.touches[0].pageY;
+        startTopScroll = elem.scrollTop;
+
+        if(startTopScroll <= 0)
+            elem.scrollTop = 1;
+
+        if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
+            elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+    }, false);
+};
+/*判断设备调用ScrollFix*/
+var sUserAgent=navigator.userAgent.toLowerCase();
+if(sUserAgent.match(/iphone os/i) == "iphone os"){
+    $('.wrapper').addClass('wrapper2');
+    ScrollFix($('.wrapper2')[0]);
+}
+
+/*阻止用户双击使屏幕上滑*/
+var agent = navigator.userAgent.toLowerCase();        //检测是否是ios
+var iLastTouch = null;                                //缓存上一次tap的时间
+if (agent.indexOf('iphone') >= 0 || agent.indexOf('ipad') >= 0)
+{
+    document.body.addEventListener('touchend', function(event)
+    {
+        var iNow = new Date()
+            .getTime();
+        iLastTouch = iLastTouch || iNow + 1 /** 第一次时将iLastTouch设为当前时间+1 */ ;
+        var delta = iNow - iLastTouch;
+        if (delta < 500 && delta > 0)
+        {
+            event.preventDefault();
+            return false;
+        }
+        iLastTouch = iNow;
+    }, false);
+}
+
+</script>
+</html>
