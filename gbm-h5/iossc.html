@@ -43,6 +43,8 @@
 	</div>
 </body>
 <script type="text/javascript">
-	body.addEventListener('touchmove', evt => evt.preventDefault());
+	document.body.style.overflow = 'hidden';
+	function _preventDefault(e) { e.preventDefault(); }
+	window.addEventListener('touchmove', _preventDefault);
 </script>
 </html>
