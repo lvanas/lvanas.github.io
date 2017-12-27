@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="js/iscroll.js"></script>
 </head>
 <body>
-	<div>
+	<div id="wrapper">
 		<p>我很好！1</p>
 		<p>我很坏！2</p>
 		<p>我很开心！3</p>
@@ -47,5 +47,10 @@
 </body>
 <script type="text/javascript">
 	window.addEventListener('touchmove', evt => evt.preventDefault());
+	
+	var myScroll;
+	function loaded() {
+		myScroll = new IScroll('#wrapper');
+	}
 </script>
 </html>
