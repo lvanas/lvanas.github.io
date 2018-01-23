@@ -14,7 +14,7 @@
 	<script type="text/javascript">
 	var myScroll;
 	function loaded () {
-		myScroll = new IScroll('#wrapper',{bounce: false,});
+		myScroll = new IScroll('#wrapper',{bounce: true,});
 		$("#wrapper").height(document.documentElement.clientHeight);
 	}
 	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
