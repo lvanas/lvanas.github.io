@@ -1177,7 +1177,8 @@ body.noheadpad {
   overflow: hidden;
 }
 .wrapcon {
-  overflow: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .headx.psre {
   position: relative;
