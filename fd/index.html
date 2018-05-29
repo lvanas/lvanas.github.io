@@ -1,0 +1,707 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/fd_beer.css" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/iscroll.js"></script>
+	<script type="text/javascript">
+	// 初始化 iScroll
+	var myScroll;
+	function loaded () {
+		myScroll = new IScroll('#wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+	}
+	</script>
+</head>
+<body class="p1-padtoff" onload="loaded()">
+	<div class="p1-headcon">
+		<!-- <div class="dlapp w100 h100 psre"  style="display:none;">
+			<div class="closebtn psab"></div>
+			<div class="dlbtn psab"></div>
+		</div> -->
+		<div class="p1-head psre">
+			<div class="text marauto clearfix">
+				<!-- <div class="wordspic fl-left">
+					<img src="images/p1-hed-wordspic.png" alt="图片" class="dpbk"  style="display:none;" />
+					<img src="images/p1-hed-wordspic2.png" alt="图片" class="dpbk"  style="display:none;" />
+					<img src="images/p1-hed-wordspic3.png" alt="图片" class="dpbk"  style="display:none;" />
+					<img src="images/p1-hed-wordspic4.png" alt="图片" />
+				</div> -->
+				<div class="choice-shop fl-left">
+					<p class="ftsz26 clwri lin40 txtalg">华普花园华普花园我</p>
+				</div>
+			</div>
+			<div class="search-btn psab">
+				<img src="images/hed-searchpic.png" alt="图片" class="fl-right" />
+			</div>
+		</div>
+		<div class="p1-sort ofhi" id="wrapper">
+			<div class="shell psre" id="scroller">
+				<ul class="padl-15 clearfix">
+					<li class="fl-left ftsz24 clwri psre">
+						<p>英式啤酒</p>
+						<span></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>修道院啤酒</p>
+						<span></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>小麦啤酒</p>
+						<span></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>酸啤/水果啤酒</p>
+						<span></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>世涛/波特啤酒</p>
+						<span></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>其他类型啤酒</p>
+						<span></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>美式啤酒</p>
+						<span></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>拉格啤酒</p>
+						<span></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>德式啤酒</p>
+						<span></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>比利时啤酒</p>
+						<span></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>IPA类</p>
+						<span></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>亚洲</p>
+						<span class="psab"></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>欧洲</p>
+						<span class="psab"></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>美洲</p>
+						<span class="psab"></span>
+					</li>
+					<li class="fl-left ftsz24 clwri psre">
+						<p>大洋洲</p>
+						<span class="psab"></span>
+					</li>
+					<!-- 空的标签，避免最后一个被遮盖住显示不全 -->
+					<li class="fl-left ftsz24 clwri psre">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span></span></li>
+				</ul>
+			</div>
+			<div class="sort-btn psab padl-10">
+				<img src="images/p1-sortpic.png" alt="图片" class="dpbk" />
+			</div>
+		</div>
+	</div>
+	<!-- <div class="p1-double11-pic" style="display:none;">
+		<img src="images/double11.jpg" alt="图片" class="dpbk w100" />
+	</div> -->
+	<div class="p1-sortmenu psfd w100 h100" id="p1-sortmenu"    style="display:block;">
+		<div class="bj w100 h100 bgcl000"></div>
+		<div class="pull psab bgclwri w100">
+			<div class="tltletxt psre">
+				<dl class="ftsz24 txtalg lin50 psre bor-radi3 marauto boxsizing clearfix">
+					<!-- dt,dd 添加 class='on' 即为选中状态 -->
+					<dt class="psab">风格分类<span></span><em></em></dt>
+					<dd class="psab on">产地分类<span></span></dd>
+				</dl>
+				<h6 class="psab"></h6>
+			</div>
+			<div class="tabs" style="display:none;">
+				<ul class="country padlr-20 ftsz22 lin50 txtalg clearfix">
+					<li class="fl-left">
+						<img src="images/asia.png" alt="图片" class="dpbk marauto" />
+						<p class="">亚洲</p>
+					</li>
+					<li class="fl-left">
+						<img src="images/europe.png" alt="图片" class="dpbk marauto" />
+						<p class="">欧洲</p>
+					</li>
+					<li class="fl-left">
+						<img src="images/america.png" alt="图片" class="dpbk marauto" />
+						<p class="">美洲</p>
+					</li>
+					<li class="fl-left">
+						<img src="images/oceania.png" alt="图片" class="dpbk marauto" />
+						<p class="">大洋洲</p>
+					</li>
+				</ul>
+			</div>
+			<div class="tabs" style="display:block;">
+				<ul class="style padlr-20 ftsz22 lin50 txtalg clearfix">
+					<li class="fl-left">
+						<img src="images/style-trappist.png" alt="图片" class="dpbk marauto" />
+						<p class="">英式啤酒</p>
+					</li>
+					<li class="fl-left">
+						<img src="images/style-british.png" alt="图片" class="dpbk marauto" />
+						<p class="">修道院啤酒</p>
+					</li>
+					<li class="fl-left">
+						<img src="images/style-wheat.png" alt="图片" class="dpbk marauto" />
+						<p class="">小麦啤酒</p>
+					</li>
+					<li class="fl-left">
+						<img src="images/style-fruit.png" alt="图片" class="dpbk marauto" />
+						<p class="">酸啤/水果啤酒</p>
+					</li>
+					<li class="fl-left">
+						<img src="images/style-porter.png" alt="图片" class="dpbk marauto" />
+						<p class="">世涛/波特啤酒</p>
+					</li>
+					<li class="fl-left">
+						<img src="images/style-porter.png" alt="图片" class="dpbk marauto" />
+						<p class="">其他类型啤酒</p>
+					</li><li class="fl-left">
+						<img src="images/style-usa.png" alt="图片" class="dpbk marauto" />
+						<p class="">美式啤酒</p>
+					</li>
+					<li class="fl-left">
+						<img src="images/style-lager.png" alt="图片" class="dpbk marauto" />
+						<p class="">拉格啤酒</p>
+					</li>
+					<li class="fl-left">
+						<img src="images/style-germany.png" alt="图片" class="dpbk marauto" />
+						<p class="">德式啤酒</p>
+					</li>
+					<li class="fl-left">
+						<img src="images/style-belgium.png" alt="图片" class="dpbk marauto" />
+						<p class="">比利时啤酒</p>
+					</li>
+					<li class="fl-left">
+						<img src="images/style-ipa.png" alt="图片" class="dpbk marauto" />
+						<p class="">IPA类</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="p1-scrollbanner swiper-container swiper-container-horizontal"  style="display:block;">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img src="images/p1-banner.jpg" alt="图片" />
+				<div class="details-btn psab">
+					<div class="bj w100 h100 bgclwri bor-radi3"></div>
+					<p class="psab ftsz18 cl222 txtalg w100">查看详情</p>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<img src="images/p1-banner.jpg" alt="图片" />
+				<div class="details-btn psab">
+					<div class="bj w100 h100 bgclwri bor-radi3"></div>
+					<p class="psab ftsz18 cl222 txtalg w100">查看详情</p>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<img src="images/p1-banner.jpg" alt="图片" />
+				<div class="details-btn psab">
+					<div class="bj w100 h100 bgclwri bor-radi3"></div>
+					<p class="psab ftsz18 cl222 txtalg w100">查看详情</p>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<img src="images/p1-banner.jpg" alt="图片" />
+				<div class="details-btn psab">
+					<div class="bj w100 h100 bgclwri bor-radi3"></div>
+					<p class="psab ftsz18 cl222 txtalg w100">查看详情</p>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+			<span class="swiper-pagination-bullet"></span>
+			<span class="swiper-pagination-bullet"></span>
+			<span class="swiper-pagination-bullet"></span>
+			<span class="swiper-pagination-bullet"></span>
+		</div>
+	</div>
+	<!-- <div class="p1-sort p1-tab ofhi"  style="display:block;">
+		<div class="shell psre">
+			<ul class="padl-15">
+				<li class="on fl-left ftsz22 cl777">
+					<p class="bgcleee padlr-15 bor-radi6">热销明星</p>
+				</li>
+				<li class="fl-left ftsz22 cl777">
+					<p class="bgcleee padlr-15 bor-radi6">本周上新</p>
+				</li>
+				<li class="fl-left ftsz22 cl777">
+					<p class="bgcleee padlr-15 bor-radi6">本周上新</p>
+				</li>
+				<li class="fl-left ftsz22 cl777">
+					<p class="bgcleee padlr-15 bor-radi6">本周上新</p>
+				</li>
+				<li class="fl-left ftsz22 cl777">
+					<p class="bgcleee padlr-15 bor-radi6">热带风情</p>
+				</li>
+				<li class="fl-left ftsz22 cl777">
+					<p class="bgcleee padlr-15 bor-radi6">热销明星</p>
+				</li>
+			</ul>
+		</div>
+	</div> -->
+	<!-- <div class="p1-salebannerone" style="display:block;">
+		<img src="images/p1-salebannerone.jpg" alt="图片" class="dpbk w100" />
+	</div> -->
+	<div class="p1-salebannermulti" style="display:block;">
+		<div class="tltlewords padtb-12" style="display:none;">
+			<p class="ftsz26 clwri txtalg lin70">有机、有调、有优惠</p>
+		</div>
+		<div class="salebannermulti ofhi">
+			<div class="shell psre">
+				<ul>
+					<li class="fl-left mgr-10">
+						<img src="images/p1-salebannermulti1.jpg" alt="图片" class="dpbk" />
+					</li>
+					<li class="fl-left mgr-10">
+						<img src="images/p1-salebannermulti2.jpg" alt="图片" class="dpbk" />
+					</li>
+					<li class="fl-left mgr-10">
+						<img src="images/p1-salebannermulti1.jpg" alt="图片" class="dpbk" />
+					</li>
+					<li class="fl-left mgr-10">
+						<img src="images/p1-salebannermulti2.jpg" alt="图片" class="dpbk" />
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="p1-titlebar padlr-25" style="display:none;">
+		<p class="ftsz32 clwri lin50 fobo">新到尖货</p>
+	</div>
+	<div class="p1-goods-wrap">
+		<div class="wrap padlr-20">
+			<div class="p1-goods clearfix">
+				<div class="pic fl-left padtb-10 psre">
+					<img src="images/p1-goodspic3.jpg" alt="图片" class="dpbk w100" />
+					<!-- <dl class="half psab clearfix">
+						<dt class="fl-left">
+							<img src="images/p1-goods-half4.png" alt="图片" class="dpbk w100" />
+						</dt>
+						<dd class="fl-left">
+							<img src="images/p1-goods-half5.png" alt="图片" class="dpbk w100" />
+						</dd>
+					</dl> -->
+				</div>
+				<div class="txt fl-right txtalgl psre">
+					<h3 class="ftsz28 clwri fobo onitone">蓝瓶的，好喝的！</h3>
+					<h6 class="ftsz22 clwri omitone">软糯绵细，来自新西兰</h6>
+					<h6 class="ftsz22 cl999 omitone"><span>355ml*1瓶</span></h6>
+					<div class="num psab clearfix">
+						<h5 class="fl-left ftsz18 psre">￥<span class="ftsz32">1180</span>.00会员价<em class="psab ftsz18 clwri txtlth">￥150.00</em></h5>
+						<div class="buymenu fl-right">
+							<dl class="clearfix">
+								<dd class="reduce fl-left"></dd>
+								<dt class="fl-left clwri padlr-10">99</dt>
+								<dd class="add fl-left"></dd>
+							</dl>
+							<!-- <h6></h6> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="p1-goods clearfix">
+				<div class="pic fl-left padtb-10 psre">
+					<img src="images/p1-goodspic1.png" alt="图片" class="dpbk w100" />
+					<!-- <dl class="half psab clearfix">
+						<dt class="fl-left">
+							<img src="images/p1-goods-half4.png" alt="图片" class="dpbk w100" />
+						</dt>
+						<dd class="fl-left">
+							<img src="images/p1-goods-half5.png" alt="图片" class="dpbk w100" />
+						</dd>
+					</dl> -->
+				</div>
+				<div class="txt fl-right txtalgl psre">
+					<h3 class="ftsz28 clwri fobo onitone">蓝瓶的，好喝的！</h3>
+					<h6 class="ftsz22 clwri omitone">软糯绵细，来自新西兰</h6>
+					<h6 class="ftsz22 cl999 omitone"><span>355ml*1瓶</span></h6>
+					<div class="num psab clearfix">
+						<h5 class="fl-left ftsz18 psre">￥<span class="ftsz32">118</span>.00会员价<em class="psab ftsz18 clwri txtlth">￥150.00</em></h5>
+						<div class="buymenu fl-right">
+							<h6></h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="p1-salebannerone">
+		<img src="images/p1-salebannerone.png" alt="图片" class="dpbk w100" />
+	</div>
+	<div class="p1-goods-wrap">
+		<div class="wrap padlr-20">
+			<div class="p1-goods clearfix">
+				<div class="pic fl-left padtb-10 psre">
+					<img src="images/p1-goodspic2.png" alt="图片" class="dpbk w100" />
+					<!-- <dl class="half psab clearfix">
+						<dt class="fl-left">
+							<img src="images/p1-goods-half4.png" alt="图片" class="dpbk w100" />
+						</dt>
+						<dd class="fl-left">
+							<img src="images/p1-goods-half5.png" alt="图片" class="dpbk w100" />
+						</dd>
+					</dl> -->
+				</div>
+				<div class="txt fl-right txtalgl psre">
+					<h3 class="ftsz28 clwri fobo onitone">北海道柠檬</h3>
+					<h6 class="ftsz22 clwri omitone">软糯绵细，来自新西兰</h6>
+					<h6 class="ftsz22 cl999 omitone"><span>355ml*1瓶</span></h6>
+					<div class="num psab clearfix">
+						<h5 class="fl-left ftsz18 psre">￥<span class="ftsz32">1180</span>.00会员价<em class="psab ftsz18 clwri txtlth">￥150.00</em></h5>
+						<div class="buymenu fl-right">
+							<dl class="clearfix">
+								<dd class="reduce fl-left"></dd>
+								<dt class="fl-left clwri padlr-10">99</dt>
+								<dd class="add fl-left"></dd>
+							</dl>
+							<!-- <h6></h6> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="p1-goods clearfix">
+				<div class="pic fl-left padtb-10 psre">
+					<img src="images/p1-goodspic2.png" alt="图片" class="dpbk w100" />
+					<!-- <dl class="half psab clearfix">
+						<dt class="fl-left">
+							<img src="images/p1-goods-half4.png" alt="图片" class="dpbk w100" />
+						</dt>
+						<dd class="fl-left">
+							<img src="images/p1-goods-half5.png" alt="图片" class="dpbk w100" />
+						</dd>
+					</dl> -->
+				</div>
+				<div class="txt fl-right txtalgl psre">
+					<h3 class="ftsz28 clwri fobo onitone">北海道柠檬</h3>
+					<h6 class="ftsz22 clwri omitone">软糯绵细，来自新西兰</h6>
+					<h6 class="ftsz22 cl999 omitone"><span>355ml*1瓶</span></h6>
+					<div class="num psab clearfix">
+						<h5 class="fl-left ftsz18 psre">￥<span class="ftsz32">118</span>.00会员价<em class="psab ftsz18 clwri txtlth">￥150.00</em></h5>
+						<div class="buymenu fl-right">
+							<h6></h6>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="p1-goods clearfix">
+				<div class="pic fl-left padtb-10 psre">
+					<img src="images/p1-goodspic2.png" alt="图片" class="dpbk w100" />
+					<!-- <dl class="half psab clearfix">
+						<dt class="fl-left">
+							<img src="images/p1-goods-half4.png" alt="图片" class="dpbk w100" />
+						</dt>
+						<dd class="fl-left">
+							<img src="images/p1-goods-half5.png" alt="图片" class="dpbk w100" />
+						</dd>
+					</dl> -->
+				</div>
+				<div class="txt fl-right txtalgl psre">
+					<h3 class="ftsz28 clwri fobo onitone">北海道柠檬</h3>
+					<h6 class="ftsz22 clwri omitone">软糯绵细，来自新西兰</h6>
+					<h6 class="ftsz22 cl999 omitone"><span>355ml*1瓶</span></h6>
+					<div class="num psab clearfix">
+						<h5 class="fl-left ftsz18 psre">￥<span class="ftsz32">118</span>.00会员价<em class="psab ftsz18 clwri txtlth">￥150.00</em></h5>
+						<div class="buymenu fl-right">
+							<h6></h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="p1-footer psfd w100 bgcl000">
+		<dl class="psre ftsz22 clearfix">
+			<dt class="psab">
+				<img src="images/p1-footer-pic2.png" alt="图片" class="dpbk marauto" />
+				<p class="txtalg">购物车</p>
+				<span class="psab ftsz16 clwri bor-radi txtalg">99</span>
+			</dt>
+			<!-- 当被选中时，img图片更换了 与GSH一样，p 标签加 on 即改变文字颜色 -->
+			<dd class="fl-left">
+				<img src="images/p1-footer-pic1on.png" alt="图片" class="dpbk marauto" />
+				<p class="on txtalg">首页</p>
+			</dd>
+			<dd class="fl-right">
+				<img src="images/p1-footer-pic3.png" alt="图片" class="dpbk marauto" />
+				<p class="txtalg">我的</p>
+			</dd>
+		</dl>
+	</div>
+	<div class="p1-cover psfd w100 h100" style="display:none;">
+		<div class="bj w100 h100 bgcl000"></div>
+		<div class="pull psab">
+			<div class="shell marauto psre">
+				<div class="">
+					<img src="images/p1-coupon-hedpic.jpg" alt="图片" class="dpbk w100" />
+				</div>
+				<div class="con">
+					<dl class="clearfix">
+						<dt class="fl-left ftsz30 w50 txtalg">￥<span>20</span></dt>
+						<dd class="fl-left w50 boxsizing">
+							<p class="ftsz28">红包</p>
+							<h6 class="ftsz18">无门槛使用</h6>
+						</dd>
+					</dl>
+					<dl class="clearfix">
+						<dt class="fl-left ftsz30 w50 txtalg">￥<span>20</span></dt>
+						<dd class="fl-left w50 boxsizing">
+							<p class="ftsz28">红包</p>
+							<h6 class="ftsz18">无门槛使用</h6>
+						</dd>
+					</dl>
+					<dl class="clearfix">
+						<dt class="fl-left ftsz30 w50 txtalg">￥<span>20</span></dt>
+						<dd class="fl-left w50 boxsizing">
+							<p class="ftsz28">红包</p>
+							<h6 class="ftsz18">无门槛使用</h6>
+						</dd>
+					</dl>
+				</div>
+				<div class="shade marauto psre"></div>
+				<div class="btn txtalg">
+					<h6 class="ftsz24 clwri lin50 bor-radi6">立即领取</h6>
+					<p class="ftsz18 fobo">优惠券已放入您账户，记得使用哦～</p>
+				</div>
+			</div>
+			<div class="closebtn psab"></div>
+		</div>
+	</div>
+	<div class="p1-cards psfd w100 h100" style="display:none;">
+		<div class="bj w100 h100 bgcl000"></div>
+		<div class="pull psab bgclwri bor-radi3">
+			<div class="shell marauto">
+				<div class="scroll">
+					<ul class="ticket marauto txtalg">
+						<li class="bj1 clearfix">
+							<div class="txt fl-left txtalgl">
+								<p class="ftsz18">满100即可使用</p>
+								<p class="ftsz18">满100减10</p>
+								<p class="ftsz18">有效期至：2018-04-03</p>
+							</div>
+							<div class="price fl-right txtalg">
+								<h4 class="ftsz24 fobo">￥<span>120</span></h4>
+								<p class="ftsz22">满减券</p>
+							</div>
+						</li>
+						<li class="bj2 clearfix">
+							<div class="txt fl-left txtalgl">
+								<p class="ftsz18">满100即可使用</p>
+								<p class="ftsz18">满100减10</p>
+								<p class="ftsz18">有效期至：2018-04-03</p>
+							</div>
+							<div class="price fl-right txtalg">
+								<h4 class="ftsz24 fobo">￥<span>120</span></h4>
+								<p class="ftsz22">满减券</p>
+							</div>
+						</li>
+						<li class="bj3 clearfix">
+							<div class="txt fl-left txtalgl">
+								<p class="ftsz18">满100即可使用</p>
+								<p class="ftsz18">满100减10</p>
+								<p class="ftsz18">有效期至：2018-04-03</p>
+							</div>
+							<div class="price fl-right txtalg">
+								<h4 class="ftsz24 fobo">￥<span>120</span></h4>
+								<p class="ftsz22">满减券</p>
+							</div>
+						</li>
+						<li class="bj2 clearfix">
+							<div class="txt fl-left txtalgl">
+								<p class="ftsz18">满100即可使用</p>
+								<p class="ftsz18">满100减10</p>
+								<p class="ftsz18">有效期至：2018-04-03</p>
+							</div>
+							<div class="price fl-right txtalg">
+								<h4 class="ftsz24 fobo">￥<span>120</span></h4>
+								<p class="ftsz22">满减券</p>
+							</div>
+						</li>
+						<li class="bj1 clearfix">
+							<div class="txt fl-left txtalgl">
+								<p class="ftsz18">满100即可使用</p>
+								<p class="ftsz18">满100减10</p>
+								<p class="ftsz18">有效期至：2018-04-03</p>
+							</div>
+							<div class="price fl-right txtalg">
+								<h4 class="ftsz24 fobo">￥<span>120</span></h4>
+								<p class="ftsz22">满减券</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="btn txtalg">
+					<h6 class="ftsz24 clwri lin50 bor-radi6">立即领取</h6>
+				</div>
+			</div>
+			<div class="closebtn psab"></div>
+		</div>
+	</div>
+	<div class="p1-gift psfd w100 h100" style="display:none;">
+		<div class="bj w100 h100 bgcl000"></div>
+		<div class="pull psab bor-radi3">
+			<!-- <div class="p1-giftpic1">
+				<img src="images/p1-giftpic1.png" alt="图片" class="dpbk marauto" />
+			</div> -->
+			<!-- <div class="p1-giftpic2 psre">
+				<img src="images/p1-giftpic2.png" alt="图片" class="dpbk" />
+				<p class="psab ftsz24 clwri txtalg w100"><span>260</span>元礼券</p>
+			</div>
+			<div class="p1-giftpic3">
+				<img src="images/p1-giftpic3.png" alt="图片" class="dpbk marauto" />
+			</div> -->
+			<div class="p1-giftpic">
+				<img src="images/p1-giftpic.jpg" alt="图片" class="dpbk marauto" />
+			</div>
+			<div class="closebtn psab"></div>
+		</div>
+	</div>
+	<div class="p1-notify psfd w100 h100" style="display:none;">
+		<div class="bj w100 h100 bgcl000"></div>
+		<div class="pull psab">
+			<div class="con">
+				<div class="tword txtalg clwri">
+					<img src="images/	p1-notifyicon.png" alt="图片" class="dpbk marauto" />
+					<h6 class="ftsz26">开启消息通知</h6>
+					<p class="ftsz22 lin40">您可以获得以下提醒</p>
+				</div>
+				<dl class="">
+					<dt class="ftsz22 lin40 leafr">物流配送</dt>
+					<dd class="ftsz18">实时跟踪您的包裹配送状态</dd>
+				</dl>
+				<dl class="">
+					<dt class="ftsz22 lin40 leafl">优惠促销</dt>
+					<dd class="ftsz18">新品试吃、每日下午抢先活动、优惠券等</dd>
+				</dl>
+				<dl class="">
+					<dt class="ftsz22 lin40 leafr">余额变动</dt>
+					<dd class="ftsz18">第一时间了解账户余额变动情况</dd>
+				</dl>
+				<div class="btn">
+					<p class="ftsz18 txtalg">立 即 开 启</p>
+				</div>
+			</div>
+			<div class="closebtn psab"></div>
+		</div>
+	</div>
+	<div class="addbuycar psfd bor-radi3" style="display:none;">
+		<div class="bj w100 h100 bgcl000 psab bor-radi6"></div>
+		<img src="images/tick-2.png" alt="图片" class="dpbk marauto psre" />
+		<p class="ftsz24 clwri txtalg lin80 psre">已成功加入购物车</p>
+	</div>
+	<!-- <div class="bootpage psfd w100 h100 ofhi" id="bootpage"  style="display:none;">
+		<div class="bj w100 h100"></div>
+		<div class="pull psab bor-radi3 w100">
+			<div class="p1-bt" id="p1-bt">
+				<div class="hpbtpic1 psre" id="hpbtpic1">
+					<img src="images/hpbtpic1.jpg" alt="图片" class="w100 dpbk" />
+					<div class="nextbtn psab txtalg ftsz24 clwri bor-radi6" id="p1nextfir">下一步</div>
+					<div class="closebtn psab" id="closebtn1"></div>
+				</div>
+				<div class="hpbtpic2 psre" id="hpbtpic2">
+						<img src="images/hpbtpic2.jpg" alt="图片" class="w100 dpbk"  />
+						<div class="nextbtn psab txtalg ftsz24 clwri bor-radi6" id="p1nextsec">下一步</div>
+						<div class="closebtn psab" id="closebtn2"></div>
+					</div>
+				<div class="hpbtpic">
+					<img src="images/hpbtpic3.jpg" alt="图片" class="w100 dpbk" />
+				</div>
+			</div>
+			<div class="p2-1-bt" id="p2-1-bt">
+				<div class="psre">
+					<img src="images/p2-1-pic1on.png" alt="图片" class="w100 dpbk" id="firpic" />
+					<div class="nextbtn psab txtalg ftsz24 clwri bor-radi6" id="nextbtn">下一步</div>
+					<div class="closebtnx psab" id="closebtn3"></div>
+				</div>
+				<div class="psre">
+					<img src="images/p2-1-pic2off.png" alt="图片" class="w100 dpbk" id="secpic" />
+					<div class="closebtn psab txtalg ftsz24 clwri bor-radi6" id="closebtn4">立即体验</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="p1-rice psfd w100 h100" style="display:none;">
+		<div class="bj w100 h100 bgcl000"></div>
+		<div class="pull psab bor-radi3 h100">
+			<div class="psre h100">
+				<img src="images/p1-ricepic.jpg" alt="图片" class="dpbk marauto w100 h100" />
+				<h6 class="psab ftsz20 cl999 padlr-20 lin30 ">5 秒后关闭</h6>
+				<h5 class="psab"></h5>
+			</div>
+		</div>
+	</div>
+	<div class="blank"></div>
+	<div class="blank"></div>
+</body>
+<script>
+   var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 12500,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+<script type="text/javascript">
+// 前提条件：滚动条p1-sort里的元素排序 与 弹层p1-sortmenu里的标签元素排序，必须保持一致才可行。
+	SortbarMoveTo('scroller','p1-sortmenu');
+
+	function SortbarMoveTo(scroll_id,tabs_id){
+		var oSortbar=document.getElementById(scroll_id);
+		var oSortbarList=oSortbar.getElementsByTagName('li');
+		// 弹层内所有标签的数组
+		var arrSortbar=[];
+		var oSortbarWidth=0;
+		for(var i=0;i<oSortbarList.length;i++){
+			arrSortbar.push(oSortbarList[i].children[0].innerHTML);
+			// 计算宽度
+			oSortbarWidth+=oSortbarList[i].offsetWidth;
+		}
+		// 给滚动的条设置宽度
+		oSortbar.style.width=oSortbarWidth+'px';
+		// 点击某个标签，得到这个标签在上面数组内的角标。
+		var oSortmenu=document.getElementById(tabs_id);
+		var oSortmenuList=oSortmenu.getElementsByTagName('li');
+		var arrSortmenu=[];
+		LimitW=oSortbarWidth-oSortmenu.offsetWidth+6;
+		for(var i=0;i<oSortmenuList.length;i++){
+			oSortmenuList[i].onclick=function (){
+				arrSortmenu.splice(0,arrSortmenu.length);
+				arrSortmenu.push(this.children[1].innerHTML);
+				num=arrSortbar.indexOf(arrSortmenu[0]);
+				oSortbarListLeft=oSortbarList[num].offsetLeft;
+				if(oSortbarListLeft <= LimitW){
+					oSortbarListLeft=oSortbarList[num].offsetLeft;
+				}else{
+					oSortbarListLeft=LimitW;
+				}
+				//oSortbar.style.transform='translate(-'+(oSortbarListLeft-8)+'px,0px) translateZ(0px)';
+				myScroll.scrollTo(-oSortbarListLeft+4,0,200);
+			}
+		}
+	};
+</script>
+</html>
