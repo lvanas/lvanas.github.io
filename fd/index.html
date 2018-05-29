@@ -127,7 +127,7 @@
 					<dt class="psab">风格分类<span></span><em></em></dt>
 					<dd class="psab on">产地分类<span></span></dd>
 				</dl>
-				<h6 class="psab"></h6>
+				<h6 class="psab" id="menuclose"></h6>
 			</div>
 			<div class="tabs" style="display:none;">
 				<ul class="country padlr-20 ftsz22 lin50 txtalg clearfix">
@@ -689,6 +689,7 @@
 		LimitW=oSortbarWidth-oSortmenu.offsetWidth+6;
 		for(var i=0;i<oSortmenuList.length;i++){
 			oSortmenuList[i].onclick=function (){
+				oSortmenu.style.display='none';
 				arrSortmenu.splice(0,arrSortmenu.length);
 				arrSortmenu.push(this.children[1].innerHTML);
 				num=arrSortbar.indexOf(arrSortmenu[0]);
