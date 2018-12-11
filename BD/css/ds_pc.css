@@ -1,0 +1,1303 @@
+i {
+  font-style: normal;
+}
+b {
+  font-weight: normal;
+}
+/* 清除浮动 */
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+/* 通用样式 */
+/* 文本长英文字母、数字不自动换行 解决 */
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+i,
+b,
+em,
+ul li,
+ol li,
+dl dt,
+dl dd {
+  word-break: break-all;
+}
+a {
+  outline: none;
+}
+a:focus {
+  outline: none;
+}
+/* 三行文字溢出隐藏显示省略号 */
+.omitthree {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+/* 双行文字溢出隐藏显示省略号 */
+.omit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* 单行文字溢出隐藏显示省略号 */
+.omitone {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 首页 */
+.hed {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.hed .logo {
+  float: left;
+  margin-right: 96px;
+}
+.hed .logo img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+.hed .menubtn {
+  display: none;
+}
+.menu {
+  display: none;
+}
+.navbar {
+  height: 50px;
+  border-top: 1px solid #69318f;
+  border-bottom: 1px solid #69318f;
+}
+.navbar ul {
+  display: table;
+  margin: 0 auto;
+  width: 900px;
+  padding: 0 150px;
+}
+.navbar ul li {
+  float: left;
+  height: 50px;
+  text-align: center;
+  margin: 0 20px;
+  cursor: pointer;
+  position: relative;
+}
+.navbar ul li .pull {
+  width: 112px;
+  z-index: 26;
+  position: absolute;
+  top: 51px;
+  left: 0;
+  opacity: 0;
+  display: none;
+}
+.navbar ul li .pull p {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 17px;
+  color: #6b6b6b;
+  border-bottom: 1px solid #fff;
+  background-color: #e5e5e5;
+}
+.navbar ul li .pull p.on {
+  color: #69318f;
+}
+.navbar ul li .carpic {
+  position: absolute;
+  top: -62px;
+  left: 50%;
+  margin-left: -39px;
+}
+.navbar ul li .carpic img {
+  display: block;
+  width: 78px;
+  height: auto;
+}
+.navbar ul li a {
+  display: block;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 15px;
+}
+.navbar ul li.on {
+  background-color: #69318f;
+}
+.navbar ul li.on a {
+  color: #fff;
+}
+.banner {
+  width: 1200px;
+  margin: 36px auto 0 auto !important;
+  padding: 36px 0;
+}
+.banner .swiper-wrapper .swiper-slide {
+  position: relative;
+}
+.banner .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 1200px !important;
+  height: 238px;
+  cursor: pointer;
+}
+.banner .swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  border: 1px solid #69318f;
+  background: rgba(0, 0, 0, 0) !important;
+  opacity: 1 !important;
+}
+.banner .swiper-pagination-bullet-active {
+  background: #69318f !important;
+}
+.swiper-container-horizontal > .swiper-pagination {
+  bottom: 22px !important;
+  right: 20px !important;
+  left: inherit !important;
+  width: auto !important;
+}
+.brand {
+  width: 1150px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+.brand .word {
+  width: 180px;
+  height: 36px;
+  background-color: #7c4b9d;
+  margin-top: 36px;
+}
+.brand .word img {
+  display: block;
+  width: 86px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 4px;
+}
+.brand .list {
+  border: 2px solid #69318f;
+  margin: 36px 0 66px 0;
+  padding: 10px;
+}
+.brand .list ul {
+  border: 4px dashed #535353;
+  padding: 30px 6px;
+}
+.brand .list ul li {
+  float: left;
+  width: 16.66%;
+  padding: 30px 0;
+}
+.footer {
+  height: 170px;
+  background-color: #ececec;
+  padding: 10px 0;
+}
+.footer .bj {
+  display: none;
+}
+.footer .content {
+  display: table;
+  margin: 0 auto;
+}
+.footer .content .contact {
+  float: left;
+  border-right: 1px solid #000;
+  margin: 24px 0;
+}
+.footer .content .contact img {
+  float: left;
+  width: 100px;
+}
+.footer .content .contact dl {
+  float: left;
+  font-size: 20px;
+  padding-right: 15px;
+  font-weight: 500;
+  margin: 6px 0;
+}
+.footer .content .contact dl dt {
+  float: left;
+  padding-left: 20px;
+}
+.footer .content .contact dl dd {
+  float: left;
+  padding-left: 20px;
+}
+.footer .content .contact dl dd h6 {
+  display: none;
+}
+.footer .content .mb-info {
+  display: none;
+}
+.footer .content .scan {
+  float: left;
+  font-size: 16px;
+  padding-left: 15px;
+}
+.footer .content .scan .mini-programs {
+  float: left;
+  width: 220px;
+  height: 120px;
+  background: url(../images/er-code-pc.png) no-repeat center center;
+  background-size: 100%;
+}
+.footer .content .scan .er-code {
+  float: left;
+  margin-right: 12px;
+  width: 200px;
+  height: 120px;
+  background: url(../images/mini-programs-pc.png) no-repeat center center;
+  background-size: 95%;
+}
+.footer .icp {
+  padding: 10px 0 0 0;
+}
+.footer .icp a {
+  display: table;
+  font-size: 16px;
+  outline: none;
+  outline: 1px solid #ececec;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.footer.on {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+body.footer-on {
+  padding-bottom: 200px;
+}
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .navbar {
+    width: 1200px;
+  }
+  .footer {
+    width: 1200px !important;
+  }
+  .footer .content {
+    margin: 0;
+  }
+  .footer .icp {
+    width: 900px;
+  }
+  .loanreckon .reckon {
+    width: 1200px;
+  }
+}
+.goodsbanner {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.goodsbanner .swiper-button-next {
+  background-image: url(../images/arrow-r.png);
+  top: 85% !important;
+}
+.goodsbanner .swiper-button-prev {
+  background-image: url(../images/arrow-l.png);
+  top: 85% !important;
+}
+.goodsbanner .point {
+  display: none;
+}
+.gallery-top {
+  padding: 38px 0 26px 0 !important;
+}
+.gallery-top .swiper-wrapper .swiper-slide {
+  position: relative;
+}
+.gallery-top .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+.gallery-top .swiper-wrapper .swiper-slide .tit1 {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 611px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 38px;
+  color: #fff;
+  text-align: center;
+  background: url(../images/tit1bj.png) no-repeat center center;
+  background-size: 100%;
+}
+.gallery-top .swiper-wrapper .swiper-slide .tit2 {
+  position: absolute;
+  top: 76px;
+  right: 0;
+  width: 436px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 38px;
+  color: #fff;
+  text-align: center;
+  background: url(../images/tit2bj.png) no-repeat center center;
+  background-size: 100%;
+}
+.gallery-thumbs {
+  width: 90%;
+  padding: 0 0 26px 0 !important;
+}
+.gallery-thumbs .swiper-wrapper {
+  width: 1096px;
+}
+.gallery-thumbs .swiper-slide {
+  cursor: pointer;
+}
+.gallery-thumbs .swiper-slide img {
+  display: block;
+  width: 22%;
+}
+.productcon.on {
+  background-color: #9a9a9a;
+}
+.productcon .txtpic {
+  padding-bottom: 40px;
+}
+.productcon .txtpic img {
+  display: block;
+  width: 880px;
+  margin: 0 auto;
+}
+.product-contactinfo {
+  width: 880px;
+  height: 880px;
+  background: url(../images/product-bj.png) no-repeat center center;
+  background-size: 100%;
+  margin: 20px auto;
+  position: relative;
+}
+.product-contactinfo .pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 290px;
+  height: 290px;
+  margin-top: -145px;
+  margin-left: -145px;
+}
+.product-contactinfo .pic img {
+  display: block;
+  width: 290px;
+  height: 290px;
+  cursor: pointer;
+}
+.product-contactinfo .info {
+  width: 360px;
+  margin: 0 auto;
+  padding-top: 356px;
+  display: none;
+  opacity: 0;
+}
+.product-contactinfo .info dl dd,
+.product-contactinfo .info dl dt {
+  height: 36px;
+  font-size: 18px;
+}
+.product-contactinfo .info dl dd {
+  background-color: #dcdcdc;
+  margin-top: 15px;
+  position: relative;
+}
+.product-contactinfo .info dl dd input {
+  width: 100%;
+  height: 100%;
+  background-color: #dcdcdc;
+  text-indent: 15px;
+  line-height: 36px;
+}
+.product-contactinfo .info dl dd span {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  height: 28px;
+  padding: 0 6px;
+  background-color: #602e82;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.product-contactinfo .info dl dd img {
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  width: 60px;
+  height: 28px;
+  cursor: pointer;
+}
+.product-contactinfo .info dl dt {
+  width: 80px;
+  background-color: #602e82;
+  color: #fff;
+  text-align: center;
+  line-height: 36px;
+  margin: 20px auto 0 auto;
+  cursor: pointer;
+}
+.product-contactinfo .fork {
+  position: absolute;
+  top: 40px;
+  right: 170px;
+  width: 60px;
+  height: 60px;
+  background: url(../images/product-fork.png) no-repeat center center;
+  background-size: 70%;
+  cursor: pointer;
+}
+.tips {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 280px;
+  height: 52px;
+  z-index: 12;
+  margin-left: -140px;
+  margin-top: -26px;
+}
+.tips .pull {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 3px;
+}
+.tips .pull .bj {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+  border-radius: 6px;
+}
+.tips .pull p {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  line-height: 52px;
+  position: relative;
+}
+.loanflow {
+  width: 1200px;
+  margin: 0 auto;
+}
+.loanflow h3 {
+  font-size: 32px;
+  text-align: center;
+  padding: 60px 0;
+}
+.loanflow dl {
+  display: table;
+  margin: 0 auto 90px auto;
+}
+.loanflow dl dt {
+  float: left;
+  width: 218px;
+  height: 163px;
+  border: 2px solid #69318f;
+  padding: 6px;
+}
+.loanflow dl dt .bor {
+  border: 2px dashed #535353;
+  height: 159px;
+}
+.loanflow dl dt .bor img {
+  display: block;
+  width: 75px;
+  margin: 22px auto 6px auto;
+}
+.loanflow dl dt .bor p {
+  font-size: 22px;
+  color: #3c363f;
+  text-align: center;
+}
+.loanflow dl dd {
+  float: left;
+  width: 140px;
+  height: 179px;
+  background: url(../images/loanflow-arrowpc.png) no-repeat center center;
+  background-size: 52%;
+}
+.loaninfo {
+  width: 1200px;
+  margin: 0 auto;
+}
+.loaninfo h3 {
+  font-size: 32px;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.loaninfo .example1,
+.loaninfo .example2 {
+  border: 2px solid #69318f;
+  padding: 8px;
+  margin-bottom: 30px;
+}
+.loaninfo .example1 .bor,
+.loaninfo .example2 .bor {
+  border: 4px dashed #535353;
+  padding: 30px;
+}
+.loaninfo .example1 .bor .pic,
+.loaninfo .example2 .bor .pic {
+  float: left;
+  width: 100%;
+}
+.loaninfo .example1 .bor .pic img,
+.loaninfo .example2 .bor .pic img {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 40px 0 rgba(81, 81, 81, 0.2);
+}
+.loaninfo .example1 .bor .tit,
+.loaninfo .example2 .bor .tit {
+  float: left;
+  width: 170px;
+  height: 40px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  background-color: #69318f;
+  position: relative;
+  margin: 140px 90px 0 110px;
+}
+.loaninfo .example1 .bor .tit span,
+.loaninfo .example2 .bor .tit span {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 170px;
+  height: 2px;
+  background-color: #69318f;
+}
+.loaninfo .example1 .bor .words,
+.loaninfo .example2 .bor .words {
+  float: left;
+  margin-top: 45px;
+}
+.loaninfo .example1 .bor .words h5,
+.loaninfo .example2 .bor .words h5,
+.loaninfo .example1 .bor .words h6,
+.loaninfo .example2 .bor .words h6 {
+  font-size: 28px;
+  text-align: center;
+  line-height: 40px;
+}
+.loaninfo .example1 .bor .words h5,
+.loaninfo .example2 .bor .words h5 {
+  color: #69318f;
+}
+.loaninfo .example1 .bor .words p,
+.loaninfo .example2 .bor .words p {
+  font-size: 16px;
+  width: 160px;
+  margin: 15px auto 0 auto;
+}
+.loaninfo .example2 .bor .pic img {
+  width: 640px;
+}
+.loaninfo .example2 .bor .txt {
+  float: left;
+  margin: 10px 0 0 200px;
+}
+.loaninfo .example2 .bor .txt .tit {
+  float: none;
+  margin: 0 auto;
+}
+.loaninfo .example2 .bor .txt .words {
+  float: none;
+}
+.loanreckon h3 {
+  font-size: 32px;
+  text-align: center;
+  padding: 60px 0;
+}
+.loanreckon .reckon {
+  background-color: #3c363f;
+  padding: 25px 0;
+}
+.loanreckon .reckon .con {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 12;
+}
+.loanreckon .reckon .con dl {
+  width: 50%;
+  font-size: 21px;
+  color: #fff;
+  float: left;
+  padding: 25px 0;
+}
+.loanreckon .reckon .con dl dt {
+  float: left;
+  width: 200px;
+  text-align: right;
+  padding-right: 32px;
+}
+.loanreckon .reckon .con dl dd {
+  width: 200px;
+  height: 39px;
+  float: left;
+  position: relative;
+}
+.loanreckon .reckon .con dl dd .dropdown {
+  width: 200px;
+  height: 40px;
+  overflow: hidden;
+  background-color: #3c363f;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  box-sizing: border-box;
+  z-index: 12;
+}
+.loanreckon .reckon .con dl dd .dropdown ul {
+  padding-bottom: 4px;
+  z-index: 12;
+}
+.loanreckon .reckon .con dl dd .dropdown ul li {
+  height: 38px;
+  font-size: 18px;
+  line-height: 38px;
+  text-indent: 15px;
+  cursor: pointer;
+  background: url(../images/loanreckon-pullbj.png) no-repeat center center;
+  background-size: 118%;
+}
+.loanreckon .reckon .con dl dd .dropdown ul li:first-child {
+  background: url(../images/loanreckon-pullbj-arrowb.png) no-repeat center center;
+  background-size: 118%;
+}
+.loanreckon .reckon .con dl dd .dropdown ul li.on {
+  background: url(../images/loanreckon-pullbj-arrowt.png) no-repeat center center;
+  background-size: 118%;
+}
+.loanreckon .reckon .con dl dd p {
+  background-color: #d3ccd7;
+  height: 100%;
+  color: #000;
+  line-height: 39px;
+  text-indent: 12px;
+  border-radius: 6px;
+  z-index: 22;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+}
+.loanreckon .reckon .con dl dd input {
+  width: 196px;
+  height: 35px;
+  background-color: #3c363f;
+  text-indent: 12px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+}
+.loanreckon .reckon .con dl .term {
+  z-index: 12;
+}
+.loanreckon .reckon h4 {
+  width: 400px;
+  font-size: 26px;
+  color: #3c363f;
+  line-height: 54px;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #fff;
+  margin: 30px auto;
+  cursor: pointer;
+}
+.loanreckon .reckon .con2 {
+  z-index: 2;
+}
+.loanreckon .reckon .con2 dl {
+  width: 33.33%;
+}
+.loanreckon .reckon .con2 dl dt {
+  width: auto;
+  padding-right: 20px;
+}
+.as-service {
+  width: 1200px;
+  margin: 0 auto 20px auto;
+}
+.as-service h3 {
+  font-size: 32px;
+  text-align: center;
+  padding: 30px 0 60px 0;
+}
+.as-service dl {
+  padding: 0 30px;
+}
+.as-service dl dt {
+  background-color: #7c4b9d;
+  border-radius: 6px;
+  display: table;
+  padding: 10px 60px;
+}
+.as-service dl dt img {
+  float: left;
+  width: 44px;
+  padding-right: 22px;
+}
+.as-service dl dt p {
+  float: left;
+  font-size: 26px;
+  color: #fff;
+  line-height: 40px;
+}
+.as-service dl dd {
+  font-size: 24px;
+  color: #4e4e4e;
+  line-height: 40px;
+  padding: 40px 0;
+}
+.as-service h4 {
+  font-size: 22px;
+  color: #7e7e7e;
+  border-top: 2px solid #7e7e7e;
+  padding: 20px 0;
+}
+.job-pic img {
+  display: block;
+  width: 475px;
+  height: 475px;
+  margin: 60px auto;
+}
+.job-info {
+  width: 860px;
+  margin: 0 auto 100px auto;
+}
+.job-info ul li {
+  float: left;
+  width: 24%;
+  height: 78px;
+  margin-right: 1%;
+  border: 1px solid #7c4b9d;
+  box-sizing: border-box;
+}
+.job-info ul li p {
+  font-size: 22px;
+  line-height: 60px;
+  text-align: center;
+  border: 1px dashed #535353;
+  width: 92%;
+  height: 78%;
+  margin: 4% auto 0 auto;
+}
+.job-info .info {
+  width: 99%;
+}
+.job-info .info dl dt,
+.job-info .info dl dd {
+  width: 25%;
+  float: left;
+  font-size: 22px;
+  line-height: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+.job-info .info dl dt {
+  padding: 15px 0;
+  cursor: pointer;
+}
+.job-info .info dl dt .apply {
+  display: table;
+  margin: 0 auto;
+  background-color: #7c4b9d;
+  padding: 0 40px 0 25px;
+  border-radius: 6px;
+}
+.job-info .info dl dt .apply img {
+  float: left;
+  width: 50px;
+}
+.job-info .info dl dt .apply P {
+  float: left;
+  line-height: 50px;
+  color: #fff;
+}
+.job-info .info dl dt .apply a {
+  color: #fff;
+}
+.job-info .info dl:nth-child(odd) {
+  background: #e6e5e6;
+  border: 1px solid #e6e5e6;
+}
+.job-info .info dl:nth-child(even) {
+  border: 1px dashed #535353;
+}
+.job_info_con {
+  width: 820px;
+  margin: 70px auto;
+}
+.job_info_con h4 {
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 45px;
+}
+.job_info_con h6 {
+  font-size: 20px;
+  color: #3d3d3d;
+  line-height: 45px;
+}
+.job_info_con ul {
+  padding: 35px 72px 35px 26px;
+  margin-top: 30px;
+}
+.job_info_con ul li {
+  font-size: 22px;
+  color: #313131;
+  line-height: 45px;
+}
+.job_info_con ul.must {
+  border: 1px solid #7c4b9d;
+}
+.job_info_con ul.add {
+  border: 1px dashed #535353;
+}
+.job_info_con h3 {
+  font-size: 20px;
+  color: #7c4b9d;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 70px;
+}
+.aboutus-pic img {
+  display: block;
+  width: 620px;
+  margin: 60px auto;
+}
+.aboutus-info h3 {
+  width: 100px;
+  height: 44px;
+  font-size: 20px;
+  line-height: 44px;
+  text-align: center;
+  margin: 50px auto 20px auto;
+  background-color: #e0dfe0;
+}
+.aboutus-info .words {
+  width: 666px;
+  margin: 0 auto;
+}
+.aboutus-info .words p,
+.aboutus-info .words h6 {
+  font-size: 19px;
+  color: #4b4b4b;
+  line-height: 29px;
+  text-indent: 34px;
+}
+.aboutus-info .words h6 {
+  margin-top: 25px;
+  text-indent: 0;
+}
+.aboutus-info .history {
+  padding-top: 32px;
+}
+.aboutus-info .history .line {
+  width: 2px;
+  height: 1140px;
+  background-color: #434343;
+  margin: 0 auto 90px auto;
+  position: relative;
+}
+.aboutus-info .history .line .point {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 900px;
+  margin-left: -450px;
+}
+.aboutus-info .history .line .point h6 {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #434343;
+  border-radius: 50%;
+  margin: -32px auto 0 auto;
+}
+.aboutus-info .history .line .point dl {
+  padding: 30px 0;
+}
+.aboutus-info .history .line .point dl dt {
+  width: 42px;
+  height: 60px;
+  background: url(../images/history-journey.png) no-repeat 0 center;
+  background-size: 100%;
+}
+.aboutus-info .history .line .point dl dd {
+  width: 385px;
+  padding: 0 22px;
+}
+.aboutus-info .history .line .point dl dd h5 {
+  font-size: 22px;
+}
+.aboutus-info .history .line .point dl dd p {
+  font-size: 18px;
+}
+.aboutus-info .history .line .point dl.left dt,
+.aboutus-info .history .line .point dl.left dd {
+  float: left;
+}
+.aboutus-info .history .line .point dl.left dd h5,
+.aboutus-info .history .line .point dl.left dd p {
+  text-align: right;
+}
+.aboutus-info .history .line .point dl.right dt,
+.aboutus-info .history .line .point dl.right dd {
+  float: right;
+}
+.dealer-address {
+  width: 818px;
+  margin: 60px auto 40px auto;
+}
+.dealer-address .drop {
+  width: 258px;
+  position: relative;
+  float: left;
+  margin-right: 20px;
+}
+.dealer-address .drop h6 {
+  font-size: 18px;
+  line-height: 40px;
+}
+.dealer-address .drop .dropdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.dealer-address .drop:last-child {
+  margin-right: 0;
+}
+.dealer-address .dropdown {
+  width: 195px;
+  height: 40px;
+  overflow: hidden;
+  background: url(../images/arrow-tb.png) no-repeat 94% 14px;
+  background-size: 20px;
+  background-color: #fff;
+  z-index: 12;
+  border: 2px solid #535353;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.dealer-address .dropdown .content-province,
+.dealer-address .dropdown .content-city,
+.dealer-address .dropdown .content-brand {
+  max-height: 420px;
+}
+.dealer-address .dropdown ul {
+  padding-bottom: 4px;
+}
+.dealer-address .dropdown ul li {
+  height: 38px;
+  font-size: 18px;
+  line-height: 38px;
+  text-indent: 15px;
+  cursor: pointer;
+  background: url(../images/dropdown-bj.png) no-repeat center center;
+  background-size: 118%;
+}
+.dealer-address .dropdown.on {
+  background: url(../images/arrow-bt.png) no-repeat 94% 14px;
+  background-size: 20px;
+  background-color: #fff;
+  overflow: visible;
+}
+#mCSB_1_scrollbar_vertical,
+#mCSB_2_scrollbar_vertical,
+#mCSB_3_scrollbar_vertical {
+  opacity: 0;
+}
+.mCSB_inside > .mCSB_container {
+  margin-right: 0 !important;
+}
+.mCSB_scrollTools {
+  width: 4px !important;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #535353;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #535353 !important;
+}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #535353 !important;
+}
+.dealer-list {
+  padding: 20px 0;
+}
+.dealer-list dl {
+  width: 818px;
+  margin: 0 auto 20px auto;
+}
+.dealer-list dl dt {
+  float: left;
+  width: 140px;
+  height: 168px;
+  border: 2px solid #69318f;
+  position: relative;
+}
+.dealer-list dl dt img {
+  display: block;
+  width: 100%;
+  height: 80px;
+  padding: 28px 0;
+}
+.dealer-list dl dt p {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: 126px;
+  height: 24px;
+  font-size: 18px;
+  color: #535353;
+  text-align: center;
+  line-height: 24px;
+  border: 2px dashed #535353;
+}
+.dealer-list dl dd {
+  float: left;
+  width: 640px;
+  height: 140px;
+  background-color: #d6d4d6;
+  border: 2px solid #d6d4d6;
+  padding: 14px 0 14px 30px;
+}
+.dealer-list dl dd h6 {
+  color: #000;
+  font-weight: bold;
+}
+.dealer-list dl dd h5,
+.dealer-list dl dd h6,
+.dealer-list dl dd p {
+  font-size: 18px;
+  color: #535353;
+  line-height: 28px;
+}
+.dealer-list dl dd h5 {
+  height: 52px;
+}
+.dealer-list dl:nth-child(even) dd {
+  border: 2px dashed #535353;
+  background-color: #fff;
+  border-left: 1px solid #fff;
+}
+.dealer-nodata {
+  padding: 60px 0;
+}
+.dealer-nodata img {
+  display: block;
+  width: 430px;
+  margin: 0 auto;
+}
+.dealer-nodata p {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+}
+.pagesign {
+  width: 818px;
+  margin: 20px auto 20px auto;
+}
+.pagesign ul {
+  display: table;
+  margin: 0 auto;
+  padding-top: 26px;
+}
+.pagesign ul li {
+  width: 38px;
+  height: 38px;
+  float: left;
+  border-radius: 6px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 38px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #999;
+  cursor: pointer;
+}
+.pagesign ul a {
+  float: left;
+  width: 40px;
+  height: 40px;
+  color: #666;
+  margin-right: 10px;
+}
+.pagesign ul li.on {
+  border: 1px solid #69318f;
+  background-color: #69318f;
+  color: #fff;
+}
+.dealer-addres {
+  width: 818px;
+  margin: 60px auto 40px auto;
+}
+.dealer-addres .drop {
+  width: 258px;
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  z-index: 12;
+}
+.dealer-addres .drop h6 {
+  width: 63px;
+  font-size: 18px;
+  line-height: 40px;
+}
+.dealer-addres .drop .dropdown,
+.dealer-addres .drop .dropdown-province,
+.dealer-addres .drop .dropdown-city,
+.dealer-addres .drop .dropdown-brandcar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 195px;
+  height: 40px;
+  border: 2px solid #535353;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.dealer-addres .drop .dropdown select,
+.dealer-addres .drop .dropdown-province select,
+.dealer-addres .drop .dropdown-city select,
+.dealer-addres .drop .dropdown-brandcar select {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  text-indent: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.dealer-addres .drop .dropdown select option,
+.dealer-addres .drop .dropdown-province select option,
+.dealer-addres .drop .dropdown-city select option,
+.dealer-addres .drop .dropdown-brandcar select option {
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+.dealer-addres .drop:last-child {
+  margin-right: 0;
+}
+.sign_in .sign_in_con {
+  width: 100%;
+  height: 100%;
+}
+.sign_in .sign_in_con.on {
+  background-color: #9a9a9a;
+}
+.sign_in .sign_in_info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 880px;
+  height: 880px;
+  background: url(../images/product-bj.png) no-repeat center center;
+  background-size: 100%;
+  margin-top: -440px;
+  margin-left: -440px;
+}
+.sign_in .sign_in_info .pic img {
+  display: block;
+  width: 290px;
+  height: 290px;
+  padding-top: 250px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.sign_in .sign_in_info .info {
+  width: 360px;
+  margin: 0 auto;
+  padding-top: 286px;
+  display: none;
+  opacity: 0;
+}
+.sign_in .sign_in_info .info dl dd,
+.sign_in .sign_in_info .info dl dt {
+  height: 40px;
+  font-size: 18px;
+}
+.sign_in .sign_in_info .info dl dd {
+  background-color: #dcdcdc;
+  margin-top: 15px;
+  position: relative;
+}
+.sign_in .sign_in_info .info dl dd input {
+  width: 100%;
+  height: 100%;
+  background-color: #dcdcdc;
+  text-indent: 15px;
+  line-height: 36px;
+}
+.sign_in .sign_in_info .info dl dd span {
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  height: 28px;
+  padding: 0 6px;
+  background-color: #602e82;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.sign_in .sign_in_info .info dl dd img {
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  width: 60px;
+  height: 28px;
+  cursor: pointer;
+}
+.sign_in .sign_in_info .info dl dt {
+  width: 80px;
+  background-color: #602e82;
+  color: #fff;
+  text-align: center;
+  line-height: 36px;
+  margin: 84px auto 0 auto;
+  cursor: pointer;
+}
+.sign_in .sign_in_info .fork {
+  position: absolute;
+  top: 40px;
+  right: 170px;
+  width: 60px;
+  height: 60px;
+  background: url(../images/product-fork.png) no-repeat center center;
+  background-size: 70%;
+  cursor: pointer;
+}
